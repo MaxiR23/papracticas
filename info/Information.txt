@@ -1,0 +1,22 @@
+- Componentes: Los componentes permiten separar la interfaz de usuario en piezas independientes, 
+reutilizables y pensar en cada pieza de forma aislada. 
+La ventaja mas grande de estos componentes es la posibilidad de reutilizarlos siempre que queramos,
+sin tener que recurrir a escribir el mismo código una y otra vez. 
+
+mas info: https://es.reactjs.org/docs/components-and-props.html
+
+- State: Los componentes de React tienen un objeto de estado incorporado.
+El objeto de estado es donde se almacenan los valores de las propiedades que pertenecen al componente.
+Cuando el objeto de estado cambia, el componente se vuelve a renderizar.
+
+En otras palabras, React utiliza un objeto observable como estado que observa qué cambios se realizan en el estado y ayuda al componente a comportarse en consecuencia.
+
+mas info: https://es.reactjs.org/docs/hooks-state.html
+
+- Hooks: La incorporación de los hooks en React nos permite desarrollar componentes funcionales con estado y ciclo de vida y, por lo tanto, prescindir de los componentes de clase.
+
+mas info: https://es.reactjs.org/docs/hooks-intro.html
+
+- Context: proporciona una forma de compartir valores como estos entre componentes sin tener que pasar explícitamente una prop a través de cada nivel del árbol.
+
+mas info: https://reactjs.org/docs/context.html

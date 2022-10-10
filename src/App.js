@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+'@ts-check';
+
 import './App.css';
+import Body from './components/Body/Body';
+import MyAccount from './components/MyAccount/MyAccount';
+import Navigation from './components/Navbar/Navigation';
+import Registration from './components/Registration/Registration';
+
+import { PointProvider } from './context/PointContext';
+import { ChakraProvider } from '@chakra-ui/react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Test from './components/Test/TestListContainer';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <PointProvider>
+        <BrowserRouter>
+        <Navigation/>
+        <Routes>
+          <Route path='/' element={ <Body/> }> </Route>
+          <Route path='/myaccount' element={ <MyAccount/> }></Route>
+          {/* //Test */}
+          <Route path='/registration' element={ <Registration/> }></Route>
+          <Route path='/test' element={ <Test/> }></Route>
+        </Routes>
+        </BrowserRouter>
+      </PointProvider>
+    </ChakraProvider>
   );
 }
 
